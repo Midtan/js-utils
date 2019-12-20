@@ -13,4 +13,18 @@ serializeArrayNotation = function(obj, prefix) {
     }
   }
   return str.join("&");
-}
+};
+
+// Get the value of query parameters
+findGetParameter = function (parameterName) {
+	var href = location.href.replace(/\[\d*\]=/g, "=");
+	var url = new URL(href);
+	var params = url.searchParams.getAll(parameterName);
+	if (params.length > 1) {
+		return params;
+	} else if (params.length === 1) {
+		return params[0];
+	} else {
+		return null;
+  }
+};
