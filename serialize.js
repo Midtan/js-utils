@@ -1,5 +1,6 @@
+// Serializes to PHP array notation
 // Taken from https://stackoverflow.com/a/1714899/
-serialize = function(obj, prefix) {
+serializeArrayNotation = function(obj, prefix) {
   var str = [],
     p;
   for (p in obj) {
