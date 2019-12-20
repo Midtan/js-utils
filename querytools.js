@@ -16,7 +16,7 @@ serializeArrayNotation = function(obj, prefix) {
 };
 
 // Get the value of query parameters
-findGetParameter = function (parameterName) {
+getParameter = function (parameterName) {
 	var href = location.href.replace(/\[\d*\]=/g, "=");
 	var url = new URL(href);
 	var params = url.searchParams.getAll(parameterName);
